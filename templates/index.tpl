@@ -224,7 +224,7 @@
                                 The idea is that there are plenty of places that we'd like
                                 to go to, but for whatever reason never get round to
                                 visiting.  By someone saying "we're going there on this 
-                                date" it becomes more likely that you'll actually get off
+                                date" it becomes much more likely that you'll actually get off
                                 your bum and visit.
                             </p>
                             <p>
