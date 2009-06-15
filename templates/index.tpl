@@ -229,7 +229,7 @@
                             </p>
                             <p>
                                 So, that's what happens.  The organiser says where and
-                                when to meet, and you as someone who's attending deals with
+                                when to meet, and you (as someone who's attending) deal with
                                 getting there and buying any tickets needed to get into the
                                 place we're visiting.  When we went to Alton Towers last
                                 year, people organised car shares to get themselves there
