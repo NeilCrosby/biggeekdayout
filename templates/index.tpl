@@ -198,12 +198,12 @@
                             <h2 class="hd">Who's coming?</h2>
                             <div class="bd">
                                 <div class="yui-u first mod">
-                                    <h3 class="hd">Attending</h3>
+                                    <h3 class="hd">Attending###attend-num###</h3>
                                     ###attend###
                                 </div>
 
                                 <div class="yui-u mod">
-                                    <h3 class="hd">Interested</h3>
+                                    <h3 class="hd">Interested###watch-num###</h3>
                                     ###watch###
                                 </div>
                             </div>

@@ -19,12 +19,18 @@ $watch   = getHtmlUserList($watch);
 $ical    = "webcal://upcoming.yahoo.com/calendar/v2/event/".UPCOMING_EVENT;
 $sign_up = "http://upcoming.yahoo.com/event/".UPCOMING_EVENT."/";
 
+$attend_num = getUserCount($data->attend);
+$attend_num = ($attend_num) ? " ($attend_num)" : '';
+
+$watch_num  = getUserCount($data->watch);
+$watch_num  = ($watch_num)  ? " ($watch_num)"  : '';
+
 mb_internal_encoding("UTF-8");
 
 $template = getTemplate();
 
-$template = str_replace( array('###attend###', '###watch###', '###ical###', '###sign-up###'),
-                         array($attend, $watch, $ical, $sign_up),
+$template = str_replace( array('###attend###', '###watch###', '###ical###', '###sign-up###', '###attend-num###', '###watch-num###'),
+                         array($attend, $watch, $ical, $sign_up, $attend_num, $watch_num),
                          $template );
 saveOutput($template);
 
@@ -67,6 +73,20 @@ function getHtmlUserList($html) {
     }
 
     return $output;
+}
+
+function getUserCount($html) {
+    $doc = new DOMDocument();
+    // have to give charset otherwise loadHTML gets confused
+    $doc->loadHTML(
+        '<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"></head><body>'.
+        $html.
+        '</body></html>'
+    );
+    $xpath = new DOMXPath($doc);
+    $items = $xpath->query("//a[@property='vcard:fn']");
+
+    return $items->length;
 }
 
 ?>
