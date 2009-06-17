@@ -1,6 +1,6 @@
 <?php
 
-define("UPCOMING_EVENT",            "2823351");
+define("UPCOMING_EVENT",            "2912229");
 define("FILE_TEMPLATE",             "/templates/index.tpl");
 define("FILE_OUTPUT",               "/index.html");
 
