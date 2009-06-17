@@ -251,6 +251,12 @@
                     Copyright &copy; 2009.
                     This page automagically updates itself every five minutes to pull in new attendees.
                 </p>
+                <p>
+                    Code available in the <a href="http://github.com/NeilCrosby/biggeekdayout/tree/master">GitHub repository</a>.
+                    Be happy.
+                    Give Hugs.
+                </p>
+                
             </div>
         </div>
     </body>
