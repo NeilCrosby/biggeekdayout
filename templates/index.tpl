@@ -184,6 +184,13 @@
                                     accessible by rail from London, Bedford and Birmingham, so there should be no excuses for anyone not being able to get there.
                                 </p>
                                 <p class="sign-up">Are you coming?  <a href="###sign-up###">Sign up</a></p>
+                                <p>
+                                    For those of you who are into that sort of thing,
+                                    Angela Alcorn has also set up a Big Geek Day Out
+                                    <a href="http://www.facebook.com/event.php?eid=194705280276">Facebook event</a>
+                                    so that's another place where people can chat about the
+                                    event before and after we go.  Enjoy!
+                                </p>
                             </div>
                             <div class="ft">
                                 <!--<ul class="social">
