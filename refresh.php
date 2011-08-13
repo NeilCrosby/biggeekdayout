@@ -27,7 +27,7 @@ $attend_num = ($attend_num) ? " ($attend_num)" : '';
 $watch_num  = getUserCount($data->watch);
 $watch_num  = ($watch_num)  ? " ($watch_num)"  : '';
 
-$flickr = getFlickrHtml(FLICKR_API_KEY, FLICKR_SEARCH);
+$flickr = '';//getFlickrHtml(FLICKR_API_KEY, FLICKR_SEARCH);
 
 mb_internal_encoding("UTF-8");
 
