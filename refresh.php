@@ -3,6 +3,8 @@
 define("UPCOMING_EVENT",            "2912229");
 define("FILE_TEMPLATE",             "/templates/index.tpl");
 define("FILE_OUTPUT",               "/index.html");
+define("FLICKR_API_KEY",            "a8b7fdd6e5829535c40c017bf26c7585");
+define("FLICKR_SEARCH",             "biggeekdayout bletchleypark");
 
 function __autoload($class_name) {
     require_once $class_name . '.php';
@@ -25,12 +27,14 @@ $attend_num = ($attend_num) ? " ($attend_num)" : '';
 $watch_num  = getUserCount($data->watch);
 $watch_num  = ($watch_num)  ? " ($watch_num)"  : '';
 
+$flickr = getFlickrHtml(FLICKR_API_KEY, FLICKR_SEARCH);
+
 mb_internal_encoding("UTF-8");
 
 $template = getTemplate();
 
-$template = str_replace( array('###attend###', '###watch###', '###ical###', '###sign-up###', '###attend-num###', '###watch-num###'),
-                         array($attend, $watch, $ical, $sign_up, $attend_num, $watch_num),
+$template = str_replace( array('###attend###', '###watch###', '###ical###', '###sign-up###', '###attend-num###', '###watch-num###', '###flickr###'),
+                         array($attend, $watch, $ical, $sign_up, $attend_num, $watch_num, $flickr),
                          $template );
 saveOutput($template);
 
@@ -38,7 +42,11 @@ $server = ( 80 == $_SERVER['SERVER_PORT'])
         ? $_SERVER['SERVER_NAME']
         : $_SERVER['SERVER_NAME'] . ':' . $_SERVER['SERVER_PORT'];
 
-header("Location: http://$server/");
+if (!isset($_GET['no_redirect'])) {
+    header("Location: http://$server/");
+}
+
+exit();
 
 
 function getTemplate() {

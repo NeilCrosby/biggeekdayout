@@ -219,35 +219,38 @@
                     </div>
 
                     <div class="yui-u mod">
-                        <h2 class="hd">What is a Big Geek Day Out?</h2>
-                        <div class="bd">
-                            <p>
-                                Big Geek Days Out are "unEvents" - one 
-                                person organises a time and place for people to meet and
-                                that's it.  Everything else is done by the people coming 
-                                to the event.
-                            </p>
-                            <p>
-                                The idea is that there are plenty of places that we'd like
-                                to go to, but for whatever reason never get round to
-                                visiting.  By someone saying "we're going there on this 
-                                date" it becomes much more likely that you'll actually get off
-                                your bum and visit.
-                            </p>
-                            <p>
-                                So, that's what happens.  The organiser says where and
-                                when to meet, and you (as someone who's attending) deal with
-                                getting there and buying any tickets needed to get into the
-                                place we're visiting.  When we went to Alton Towers last
-                                year, people organised car shares to get themselves there
-                                and sourced buy-one-get-one-free tickets for each other.
-                            </p>
-                            <p>
-                                Of course, whilst the event isn't classically organised
-                                it's still good to know who's going to be coming.  If you 
-                                are going to come along, please add yourself to the
-                                <a href="###sign-up###">Upcoming Event</a>.
-                            </p>
+                        ###flickr###
+                        <div class="mod yui-g">
+                            <h2 class="hd">What is a Big Geek Day Out?</h2>
+                            <div class="bd">
+                                <p>
+                                    Big Geek Days Out are "unEvents" - one 
+                                    person organises a time and place for people to meet and
+                                    that's it.  Everything else is done by the people coming 
+                                    to the event.
+                                </p>
+                                <p>
+                                    The idea is that there are plenty of places that we'd like
+                                    to go to, but for whatever reason never get round to
+                                    visiting.  By someone saying "we're going there on this 
+                                    date" it becomes much more likely that you'll actually get off
+                                    your bum and visit.
+                                </p>
+                                <p>
+                                    So, that's what happens.  The organiser says where and
+                                    when to meet, and you (as someone who's attending) deal with
+                                    getting there and buying any tickets needed to get into the
+                                    place we're visiting.  When we went to Alton Towers last
+                                    year, people organised car shares to get themselves there
+                                    and sourced buy-one-get-one-free tickets for each other.
+                                </p>
+                                <p>
+                                    Of course, whilst the event isn't classically organised
+                                    it's still good to know who's going to be coming.  If you 
+                                    are going to come along, please add yourself to the
+                                    <a href="###sign-up###">Upcoming Event</a>.
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
