@@ -1,6 +1,7 @@
 <?php
 
-define("UPCOMING_EVENT",            "2912229");
+//define("UPCOMING_EVENT",            "2912229");
+define("LANYRD_EVENT",              "big-geek-day-out-the-great-western-lego-show");
 define("FILE_TEMPLATE",             "/templates/index.tpl");
 define("FILE_OUTPUT",               "/index.html");
 define("FLICKR_API_KEY",            "a8b7fdd6e5829535c40c017bf26c7585");
@@ -10,21 +11,27 @@ function __autoload($class_name) {
     require_once $class_name . '.php';
 }
 
-$url = "http://upcoming.yahoo.com/ajax/event_page_all_attendees.php?event_id=".UPCOMING_EVENT;
-$data = simplexml_load_file( $url );
+#$url = "http://upcoming.yahoo.com/ajax/event_page_all_attendees.php?event_id=".UPCOMING_EVENT;
+#$data = simplexml_load_file( $url );
 
-$attend = (string)$data->attend;
-$watch  = (string)$data->watch;
+$url = "http://lanyrd.com/2011/".LANYRD_EVENT."/";
 
-$attend  = getHtmlUserList($attend);
-$watch   = getHtmlUserList($watch);
-$ical    = "webcal://upcoming.yahoo.com/calendar/v2/event/".UPCOMING_EVENT;
-$sign_up = "http://upcoming.yahoo.com/event/".UPCOMING_EVENT."/";
+$doc = getDataFromFeed($url);
 
-$attend_num = getUserCount($data->attend);
+$xpath = new DOMXPath($doc);
+
+$attend = $xpath->query("//div[contains(@class, 'attendees-placeholder')]");
+$watch  = $xpath->query("//div[contains(@class, 'trackers-placeholder')]");
+
+$attend  = getHtmlUserList($doc, 'attendees');
+$watch   = getHtmlUserList($doc, 'trackers');
+$ical    = "http://lanyrd.com/2011/big-geek-day-out-the-great-western-lego-show/big-geek-day-out-the-great-western-lego-show.ics";
+$sign_up = $url;
+
+$attend_num = getUserCount($doc, 'attendees');
 $attend_num = ($attend_num) ? " ($attend_num)" : '';
 
-$watch_num  = getUserCount($data->watch);
+$watch_num  = getUserCount($doc, 'trackers');
 $watch_num  = ($watch_num)  ? " ($watch_num)"  : '';
 
 $flickr = '';//getFlickrHtml(FLICKR_API_KEY, FLICKR_SEARCH);
@@ -57,25 +64,26 @@ function saveOutput( $template ) {
     return file_put_contents($_SERVER['DOCUMENT_ROOT'].FILE_OUTPUT, $template);
 }
 
-function getHtmlUserList($html) {
-    $doc = new DOMDocument();
-    // have to give charset otherwise loadHTML gets confused
-    $doc->loadHTML(
-        '<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"></head><body>'.
-        $html.
-        '</body></html>'
-    );
+function getHtmlUserList($doc, $type) {
     $xpath = new DOMXPath($doc);
-    $items = $xpath->query("//a[@property='vcard:fn']");
+    $items = $xpath->query("//div[contains(@class, '${type}-placeholder')]//a");
 
     $output = '';
     if ($items->length > 0) {
         $output = "<ul class='bd'>";
         foreach ($items as $item) {
-            $href = $item->attributes->getNamedItem('href')->nodeValue;
-            $text = (string)$item->firstChild->nodeValue;
-
-            $output .= "<li><a href='${href}'>${text}</a></li>";
+            $text = $item->attributes->getNamedItem('title')->nodeValue;
+            
+            $atPosition = strrpos($text, '@');
+            if ( false === $atPosition ) {
+                continue;
+            }
+            
+            $text = substr($text, $atPosition + 1);
+            
+            $href= "http://twitter.com/${text}";
+            
+            $output .= "<li><a href='${href}'>@${text}</a></li>";
         }
         $output .= "</ul>";
     }
@@ -83,18 +91,29 @@ function getHtmlUserList($html) {
     return $output;
 }
 
-function getUserCount($html) {
-    $doc = new DOMDocument();
-    // have to give charset otherwise loadHTML gets confused
-    $doc->loadHTML(
-        '<html><head><meta http-equiv="content-type" content="text/html; charset=utf-8"></head><body>'.
-        $html.
-        '</body></html>'
-    );
+function getUserCount($doc, $type) {
     $xpath = new DOMXPath($doc);
-    $items = $xpath->query("//a[@property='vcard:fn']");
+    $items = $xpath->query("//div[contains(@class, '${type}-placeholder')]//a");
 
     return $items->length;
 }
+
+function getDataFromFeed( $url ) {
+    $data = apc_fetch($url);
+    if (!$data) {
+        error_log('CACHE MISS: '.$url);
+
+        $data = file_get_contents( $url );
+
+        apc_store($url, $data, 600);
+    }
+    
+    $doc = new DomDocument();
+    @$doc->loadHtml( $data );
+    
+    return $doc;
+}
+
+
 
 ?>

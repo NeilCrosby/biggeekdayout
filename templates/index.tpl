@@ -149,7 +149,7 @@
         <div id="doc">
             <div id="hd">
                 <h1><em>Big</em> <span>Geek</span> Day Out</h1>
-                <h2>Bletchley Park</h2>
+                <h2>The Great Western Lego Show</h2>
                 <p>
                     <a href="###ical###"><img src="/image/ical.png" alt="Add The Big Geek Day Out to your calendar" title="Add The Big Geek Day Out to your calendar"></a>
                 </p>
@@ -164,41 +164,35 @@
                                     <span class="summary">Big Geek Day Out</span> 
                                     is being held on 
                                     <span class="dtstart">
-                                        <span class="value" title="2009-07-18">Saturday 18th July 2009</span> 
+                                        <span class="value" title="2011-10-01">Saturday 1st October 2011</span> 
                                         from 
-                                        <span class="value" title="10:30">10:30am</span>
+                                        <span class="value" title="11:00">11:00am</span>
                                     </span>
                                     at
-                                    <a href="http://www.bletchleypark.org.uk" class="location">Bletchley Park</a>,
-                                    the home of high-level British Intelligence 
-                                    during World War II.
+                                    <a href="http://www.steam-museum.org.uk/" class="location">STEAM</a>,
+                                    the Museum of The Great Western Railway, in Swindon.
                                 </p>
                                 <p>
-                                    Tickets cost £10.00 on the
-                                    door, or 
-                                    <a href="http://www.bletchleypark.org.uk/shop/index.rhtm/130872/cat.html">£8.50 online</a>
-                                    (and let you go back as often as you want for a year). 
+                                    We'll be there to look at lots of wonderful
+                                    Lego at The Great Western LEGO Show - the 
+                                    largest display of models built by LEGO fans 
+                                    in the UK. If you like Lego, it'll be
+                                    awesome fun.
                                 </p>
                                 <p>
-                                    Bletchley Park is surprisingly easily
-                                    accessible by rail from London, Bedford and Birmingham, so there should be no excuses for anyone not being able to get there.
+                                    Tickets cost £10.00 on the door for adults,
+                                    or £8.50 for children or concessions. More
+                                    info is available at the 
+                                    <a href="http://www.greatwesternlegoshow.com/about-show/admission-prices">Great Western Lego Show website</a>.
+                                </p>
+                                <p>
+                                    The Museum of The Great Western Railway is 
+                                    on the main London Paddington to Bristol line, 
+                                    so there should be no excuses for anyone not being able to get there.
+                                    If you come by train, apparently you'll even get
+                                    20% off entry to the museum.
                                 </p>
                                 <p class="sign-up">Are you coming?  <a href="###sign-up###">Sign up</a></p>
-                                <p>
-                                    For those of you who are into that sort of thing,
-                                    Angela Alcorn has also set up a Big Geek Day Out
-                                    <a href="http://www.facebook.com/event.php?eid=194705280276">Facebook event</a>
-                                    so that's another place where people can chat about the
-                                    event before and after we go.  Enjoy!
-                                </p>
-                            </div>
-                            <div class="ft">
-                                <!--<ul class="social">
-                                    <li><a href="#TODO"><img src="/image/ical.png" alt="Add this to your calendar"></a></li>
-                                    <li><a href="#TODO"><img src="/image/twitter.png" alt="Tweet this"></a></li>
-                                    <li><a href="#TODO"><img src="/image/delicious.gif" alt="Add to delicious"></a></li>
-                                    <li><a href="#TODO"><img src="/image/upcoming.png" alt="Add to your Upcoming events"></a></li>
-                                </ul>-->
                             </div>
                         </div>
                         <div class="mod yui-g" id="whos-coming">
@@ -240,15 +234,18 @@
                                     So, that's what happens.  The organiser says where and
                                     when to meet, and you (as someone who's attending) deal with
                                     getting there and buying any tickets needed to get into the
-                                    place we're visiting.  When we went to Alton Towers last
-                                    year, people organised car shares to get themselves there
+                                    place we're visiting.  When we went to Alton Towers a few
+                                    years ago, people organised car shares to get themselves there
                                     and sourced buy-one-get-one-free tickets for each other.
+                                    When we went to Bletchley Park, the boffins
+                                    there got wind of our scheme and organised
+                                    a full day of events for us!
                                 </p>
                                 <p>
                                     Of course, whilst the event isn't classically organised
                                     it's still good to know who's going to be coming.  If you 
-                                    are going to come along, please add yourself to the
-                                    <a href="###sign-up###">Upcoming Event</a>.
+                                    are going to come along, please add yourself to
+                                    <a href="###sign-up###">the event on Lanyrd</a>.
                                 </p>
                             </div>
                         </div>
@@ -258,8 +255,8 @@
             <div id="ft">
                 <p>
                     Lovingly tended by <a href="http://neilcrosby.com" rel="me">Neil Crosby</a>.
-                    Copyright &copy; 2009.
-                    This page automagically updates itself every five minutes to pull in new attendees.
+                    Copyright &copy; 2009-2011.
+                    This page automagically updates itself every few minutes to pull in new attendees.
                 </p>
                 <p>
                     Code available in the <a href="http://github.com/NeilCrosby/biggeekdayout/tree/master">GitHub repository</a>.
