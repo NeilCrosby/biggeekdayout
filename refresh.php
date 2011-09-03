@@ -72,6 +72,10 @@ function getHtmlUserList($doc, $type) {
     if ($items->length > 0) {
         $output = "<ul class='bd'>";
         foreach ($items as $item) {
+            $imgs = $xpath->query("img[not(contains(@class, 'youfollow'))]", $item);
+            
+            $img = $imgs->item(0)->attributes->getNamedItem('src')->nodeValue;
+
             $text = $item->attributes->getNamedItem('title')->nodeValue;
             
             $atPosition = strrpos($text, '@');
@@ -83,7 +87,7 @@ function getHtmlUserList($doc, $type) {
             
             $href= "http://twitter.com/${text}";
             
-            $output .= "<li><a href='${href}'>@${text}</a></li>";
+            $output .= "<li><a href='${href}'><img src='${img}' alt='@${text}' title='@${text}'></a></li>";
         }
         $output .= "</ul>";
     }

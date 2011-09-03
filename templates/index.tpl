@@ -143,6 +143,11 @@
                 font-weight: bold;
                 color: #00e;
             }
+            
+            .users li {
+                display: inline;
+                margin-right: 3px;
+            }
         </style>
     </head>
     <body>
@@ -158,6 +163,7 @@
                 <div class="yui-g">
                     <div class="yui-u first vevent">
                         <div class="mod">
+                            <h2 class="hd">When's the next one?</h2>
                             <div class="bd">
                                 <p class="description">
                                     The next 
@@ -192,64 +198,61 @@
                                     If you come by train, apparently you'll even get
                                     20% off entry to the museum.
                                 </p>
-                                <p class="sign-up">Are you coming?  <a href="###sign-up###">Sign up</a></p>
-                            </div>
-                        </div>
-                        <div class="mod yui-g" id="whos-coming">
-                            <h2 class="hd">Who's coming?</h2>
-                            <div class="bd">
-                                <div class="yui-u first mod">
-                                    <h3 class="hd">Attending###attend-num###</h3>
-                                    ###attend###
-                                </div>
-
-                                <div class="yui-u mod">
-                                    <h3 class="hd">Interested###watch-num###</h3>
-                                    ###watch###
-                                </div>
+                                <p class="sign-up">Are you coming?  <a href="###sign-up###">Tell us!</a></p>
                             </div>
                         </div>
 
                     </div>
 
-                    <div class="yui-u mod">
-                        ###flickr###
-                        <div class="mod yui-g">
-                            <h2 class="hd">What is a Big Geek Day Out?</h2>
-                            <div class="bd">
-                                <p>
-                                    Big Geek Days Out are "unEvents" - one 
-                                    person organises a time and place for people to meet and
-                                    that's it.  Everything else is done by the people coming 
-                                    to the event.
-                                </p>
-                                <p>
-                                    The idea is that there are plenty of places that we'd like
-                                    to go to, but for whatever reason never get round to
-                                    visiting.  By someone saying "we're going there on this 
-                                    date" it becomes much more likely that you'll actually get off
-                                    your bum and visit.
-                                </p>
-                                <p>
-                                    So, that's what happens.  The organiser says where and
-                                    when to meet, and you (as someone who's attending) deal with
-                                    getting there and buying any tickets needed to get into the
-                                    place we're visiting.  When we went to Alton Towers a few
-                                    years ago, people organised car shares to get themselves there
-                                    and sourced buy-one-get-one-free tickets for each other.
-                                    When we went to Bletchley Park, the boffins
-                                    there got wind of our scheme and organised
-                                    a full day of events for us!
-                                </p>
-                                <p>
-                                    Of course, whilst the event isn't classically organised
-                                    it's still good to know who's going to be coming.  If you 
-                                    are going to come along, please add yourself to
-                                    <a href="###sign-up###">the event on Lanyrd</a>.
-                                </p>
+                    <div class="mod yui-u" id="whos-coming">
+                        <h2 class="hd">Who's coming?</h2>
+                        <div class="bd">
+                            <div class="users attending mod">
+                                <h3 class="hd">Attending###attend-num###</h3>
+                                ###attend###
+                            </div>
+
+                            <div class="users tracking mod">
+                                <h3 class="hd">Interested###watch-num###</h3>
+                                ###watch###
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="mod">
+                <h2 class="hd">What is a Big Geek Day Out?</h2>
+                <div class="bd">
+                    <p>
+                        Big Geek Days Out are "unEvents" - one 
+                        person organises a time and place for people to meet and
+                        that's it.  Everything else is done by the people coming 
+                        to the event.
+                    </p>
+                    <p>
+                        The idea is that there are plenty of places that we'd like
+                        to go to, but for whatever reason never get round to
+                        visiting.  By someone saying "we're going there on this 
+                        date" it becomes much more likely that you'll actually get off
+                        your bum and visit.
+                    </p>
+                    <p>
+                        So, that's what happens.  The organiser says where and
+                        when to meet, and you (as someone who's attending) deal with
+                        getting there and buying any tickets needed to get into the
+                        place we're visiting.  When we went to Alton Towers a few
+                        years ago, people organised car shares to get themselves there
+                        and sourced buy-one-get-one-free tickets for each other.
+                        When we went to Bletchley Park, the boffins
+                        there got wind of our scheme and organised
+                        a full day of events for us!
+                    </p>
+                    <p>
+                        Of course, whilst the event isn't classically organised
+                        it's still good to know who's going to be coming.  If you 
+                        are going to come along, please add yourself to
+                        <a href="###sign-up###">the event on Lanyrd</a>.
+                    </p>
                 </div>
             </div>
             <div id="ft">
